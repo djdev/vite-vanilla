@@ -3,6 +3,15 @@ import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.js";
 
+console.log(import.meta.env);
+console.log(`Server is running in ${import.meta.env.MODE}`);
+
+if (import.meta.env.MODE === "development") {
+  console.log("Development mode");
+} else {
+  console.log("Production mode");
+}
+
 document.querySelector("#app").innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
